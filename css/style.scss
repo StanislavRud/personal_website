@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+$width : 1300px;
+
+
+
+
+body {
+  header {
+    background: black;
+    position: fixed;
+    width: 100%;
+    .block_header_inner {
+      max-width: $width;
+      margin: 0 auto;
+      //height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      img {
+        //height: 100%;
+        width: 65px;
+        border-radius: 50%;
+      }
+      nav {
+        ul {
+          display: flex;
+
+
+          li {
+            list-style: none;
+            margin-right: 15px;
+            a {
+              color: white;
+              text-decoration: none;
+              i {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .block_home {
+    background: url("./../img/back.jpg") no-repeat;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    .block_home_inner {
+      max-width: $width;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+      h1 {
+        color: #ffffffd6;
+        font-size: 60px;
+      }
+      h2 {
+        color: #ffffffd6;
+        font-size: 35px;
+      }
+      .block_home_social{
+        .block_home_contact{
+          width: 300px;
+          display: flex;
+          justify-content: space-between;
+          button {
+            padding: 10px 25px;
+            border: 2px solid #3bcdfc;
+            border-radius: 5px;
+            background: transparent;
+            cursor: pointer;
+            color: white;
+            transition: color 0.5s linear;
+            &:hover {
+              background: #3bcdfc;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .block_about {
+    background-color: #f2f1f2;
+    padding: 50px 0;
+    .block_about_inner {
+      max-width: $width;
+      margin: 0 auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        display: block;
+        padding: 10px 100px;
+        border: 2px solid black;
+        border-radius: 15px;
+      }
+      .block_about_description {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        img {
+          margin-right: 25px;
+        }
+      }
+      .block_about_skills {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        .skill {
+          width: 50%;
+          padding: 10px 40px;
+          .skill_name {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 20px 0;
+          }
+          .skill_bar {
+            height: 20px;
+            background: #cacaca;
+            border-radius: 8px;
+            .skill_per {
+              height: 20px;
+              background-color: #02aefe;
+              border-radius: 8px;
+              width: 0;
+              position: relative;
+              &:before {
+                content: attr(per);
+                position: absolute;
+                padding: 4px 6px;
+                background-color: black;
+                color: white;
+                font-size: 12px;
+                border-radius: 4px;
+                top: -35px;
+                right: 0;
+                transform: translateX(50%);
+              }
+              &:after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: black;
+                top: -19px;
+                right: 0;
+                transform: translateX(50%) rotate(45deg);
+                border-radius: 2px;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+  .block_education {
+    .block_education_inner {
+      max-width: $width;
+      margin: 0 auto;
+    }
+  }
+  .block_works {
+    .block_works_inner {
+      max-width: $width;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .block_contact {
+    .block_contact_inner {
+      max-width: $width;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}
