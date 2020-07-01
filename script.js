@@ -13,7 +13,7 @@ window.addEventListener("scroll", progress);
 let prevSlideButton = document.querySelector('.prevSlide');
 let nextSlideButton = document.querySelector('.nextSlide');
 let img = document.querySelector('.myWorks');
-let arrImg = ["url(./img/elem1.jpg)", "url(./img/elem2.jpg)", "url(./img/elem3.jpg)", "url(./img/elem4.jpg)", "url(./img/elem5.jpg)" ];
+let arrImg = ["url(./img/elem1.jpg)", "url(./img/elem2.jpg)", "url(./img/elem3.jpg)", "url(./img/elem4.jpg)", "url(./img/elem5.jpg)","url(./img/elem6.jpg)","url(./img/elem7.jpg)" ];
 let currentImg = 0;
 
 let points = document.querySelector('.slide_points');
@@ -69,7 +69,25 @@ function clickPrev (){
 }
 
 
-setInterval(clickNext, 6000);
+let sliderStart = setInterval(clickNext, 7000);
+
+let stop_slider = () => {
+    clearInterval(sliderStart);
+}
+
+let resume_slider = () => {
+    sliderStart = setInterval(clickNext, 7000);
+}
+
+
+
+
+img.addEventListener('mouseover', stop_slider);
+img.addEventListener('mouseout', resume_slider);
+nextSlideButton.addEventListener('mouseover', stop_slider);
+prevSlideButton.addEventListener('mouseover', stop_slider);
+nextSlideButton.addEventListener('mouseout', resume_slider);
+prevSlideButton.addEventListener('mouseout', resume_slider);
 
 nextSlideButton.addEventListener('click', clickNext);
 prevSlideButton.addEventListener('click', clickPrev);
