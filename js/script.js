@@ -1,18 +1,44 @@
-let persent = document.querySelectorAll('.skill_per');
-
 let progress = () => {
-    for (let i = 0; i < persent.length; i++) {
-        persent[i].style.width = persent[i].getAttribute('per') + '%';
+    let mainMenu = document.querySelectorAll('a.main_menu');
+    let persent = document.querySelectorAll('.skill_per');
+    if (pageYOffset > 20) {
+        for (let i = 0; i < persent.length; i++) {
+            persent[i].style.width = persent[i].getAttribute('per') + '%';
+        }
+        document.querySelector('header').style.backgroundColor = 'white';
 
+        // for (let i = 0; i < mainMenu.length; i++) {
+        //     mainMenu[i].style.color = 'black';
+        // }
+        mainMenu.forEach(m => m.classList.add('black'))
+
+    } else {
+
+        for (let i = 0; i < persent.length; i++) {
+            persent[i].style.width = 0;
+        }
+
+
+
+        document.querySelector('header').style.backgroundColor = 'transparent'
+        // for (let i = 0; i < mainMenu.length; i++) {
+        //     mainMenu[i].style.color = 'white';
+        // }
+        mainMenu.forEach(m => m.classList.remove('black') )
     }
 }
+
+
 
 window.addEventListener("scroll", progress);
 
 
+
+
+
 let prevSlideButton = document.querySelector('.prevSlide');
 let nextSlideButton = document.querySelector('.nextSlide');
-let img = document.querySelector('.myWorks');
+let slideImg = document.querySelector('.myWorks');
 let arrImg = ["url(./img/elem1.jpg)", "url(./img/elem2.jpg)", "url(./img/elem3.jpg)", "url(./img/elem4.jpg)", "url(./img/elem5.jpg)","url(./img/elem6.jpg)","url(./img/elem7.jpg)" ];
 let currentImg = 0;
 
@@ -36,7 +62,7 @@ function clickNext () {
     } else
         currentImg++;
 
-    img.style.backgroundImage = arrImg[currentImg];
+    slideImg.style.backgroundImage = arrImg[currentImg];
     paint_doter()
 }
 
@@ -64,7 +90,7 @@ function clickPrev (){
         currentImg = arrImg.length - 1;
     } else
         currentImg--;
-    img.style.backgroundImage = arrImg[currentImg];
+    slideImg.style.backgroundImage = arrImg[currentImg];
     paint_doter()
 }
 
@@ -82,8 +108,8 @@ let resume_slider = () => {
 
 
 
-img.addEventListener('mouseover', stop_slider);
-img.addEventListener('mouseout', resume_slider);
+slideImg.addEventListener('mouseover', stop_slider);
+slideImg.addEventListener('mouseout', resume_slider);
 nextSlideButton.addEventListener('mouseover', stop_slider);
 prevSlideButton.addEventListener('mouseover', stop_slider);
 nextSlideButton.addEventListener('mouseout', resume_slider);

@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>My Website</title>
 </head>
 <body>
 <header>
     <div class="block_header_inner">
-        <img src="./img/logo.png" alt="logo">
+        <a href="/" class="logo"></a>
         <nav>
+            <button class="menu-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
-                <li><a href="#"><i class="fas fa-home home"></i>Home</a></li>
-                <li><a href="#"><i class="fas fa-align-left about"></i>About</a></li>
-                <li><a href="#"><i class="fas fa-university"></i>Education</a></li>
-                <li><a href="#"><i class="far fa-building"></i>Works</a></li>
-                <li><a href="#"><i class="fas fa-address-card"></i>Contact</a></li>
+                <li><a href="#" class="main_menu"><i class="fas fa-home home"></i>Home</a></li>
+                <li><a  href="#" class="main_menu"><i class="fas fa-align-left about"></i>About</a></li>
+                <li><a  href="#" class="main_menu"><i class="fas fa-university"></i>Education</a></li>
+                <li><a  href="#" class="main_menu"><i class="far fa-building"></i>Works</a></li>
+                <li><a  href="#" class="main_menu"><i class="fas fa-address-card"></i>Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 <div class="block_home">
     <div class="block_home_inner">
-        <h1>Hi I'm Stanislav Rud</h1>
+        <h1>Hi I'm Stanislav Rud </h1>
         <h2>Junior Front-End Developer</h2>
             <div class="block_home_contact">
                 <button>Contact me</button>
@@ -51,6 +58,12 @@
             <div class="skill">
                 <div class="skill_name">css/scss</div>
                 <div class="skill_bar">
+                    <div class="skill_per" per="75"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill_name">Flexbox</div>
+                <div class="skill_bar">
                     <div class="skill_per" per="70"></div>
                 </div>
             </div>
@@ -64,6 +77,12 @@
                 <div class="skill_name">react</div>
                 <div class="skill_bar">
                     <div class="skill_per" per="30"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill_name">Git</div>
+                <div class="skill_bar">
+                    <div class="skill_per" per="70"></div>
                 </div>
             </div>
         </div>
@@ -180,6 +199,6 @@
     <a href="#"><i class="fab fa-skype"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
 </footer>
-<script src="script.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
