@@ -2,39 +2,37 @@ let progress = () => {
     let mainMenu = document.querySelectorAll('a.main_menu');
     let persent = document.querySelectorAll('.skill_per');
     if (pageYOffset > 20) {
+
         for (let i = 0; i < persent.length; i++) {
             persent[i].style.width = persent[i].getAttribute('per') + '%';
         }
         document.querySelector('header').style.backgroundColor = 'white';
+        mainMenu.forEach(m => m.classList.add('black'));
+        document.querySelector('nav').classList.add('min');
 
-        // for (let i = 0; i < mainMenu.length; i++) {
-        //     mainMenu[i].style.color = 'black';
-        // }
-        mainMenu.forEach(m => m.classList.add('black'))
 
     } else {
-
+        document.querySelector('nav').classList.remove('min');
+        document.querySelector('header').style.backgroundColor = 'transparent';
         for (let i = 0; i < persent.length; i++) {
             persent[i].style.width = 0;
         }
 
-
-
-        document.querySelector('header').style.backgroundColor = 'transparent'
-        // for (let i = 0; i < mainMenu.length; i++) {
-        //     mainMenu[i].style.color = 'white';
-        // }
         mainMenu.forEach(m => m.classList.remove('black') )
     }
 }
 
-
-
 window.addEventListener("scroll", progress);
 
+let activeToggleMenu = document.querySelector('.menu-toggler');
 
+let addClassActive = () => {
+    activeToggleMenu.classList.toggle('active');
+    document.querySelector('nav').classList.toggle('active');
 
+}
 
+activeToggleMenu.addEventListener("click", addClassActive);
 
 let prevSlideButton = document.querySelector('.prevSlide');
 let nextSlideButton = document.querySelector('.nextSlide');
@@ -105,15 +103,11 @@ let resume_slider = () => {
     sliderStart = setInterval(clickNext, 7000);
 }
 
-
-
-
 slideImg.addEventListener('mouseover', stop_slider);
 slideImg.addEventListener('mouseout', resume_slider);
 nextSlideButton.addEventListener('mouseover', stop_slider);
 prevSlideButton.addEventListener('mouseover', stop_slider);
 nextSlideButton.addEventListener('mouseout', resume_slider);
 prevSlideButton.addEventListener('mouseout', resume_slider);
-
 nextSlideButton.addEventListener('click', clickNext);
 prevSlideButton.addEventListener('click', clickPrev);
