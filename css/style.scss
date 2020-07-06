@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -128,6 +133,9 @@ body {
           cursor: pointer;
           color: white;
           transition: all 0.2s linear;
+          &:focus {
+            outline: none;
+          }
 
           &:hover {
             background: #3bcdfc;
@@ -579,6 +587,111 @@ body {
         }
       }
     }
+    .block_home {
+      .block_home_inner {
+        .block_home_contact{
+          width: 65%;
+          button {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .block_about {
+      padding: 30px 0;
+    }
+    .block_education {
+      padding: 30px 0;
+    }
+    .block_works {
+      padding: 30px 0 0;
+      .block_works_inner {
+        .block_works_inner_slider {
+          height: 650px;
+        }
+      }
+    }
+    .block_contact {
+      padding: 30px 0;
+    }
   }
+}
 
+@media screen and (max-width: 760px){
+  body {
+    header {
+      .block_header_inner {
+        nav {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          background-color: #353b48;
+          top: 0;
+          right: -100%;
+          max-width: 400px;
+          padding: 80px 50px;
+          transition: .3s linear;
+          flex-direction: column;
+          align-items: flex-start;
+          .menu-toggler {
+            display: block;
+            position: fixed;
+            right: 20px;
+            top: 10px;
+          }
+          .active span:nth-child(1){
+            transform: rotate(-45deg);
+            top: 4px;
+          }
+
+          .active span:nth-child(2){
+            opacity: 0;
+          }
+
+          .active span:nth-child(3){
+            transform: rotate(45deg);
+            top: -14px;
+          }
+
+
+          ul {
+            flex-direction: column;
+            li {
+              a.main_menu {
+                display: block;
+                font-size: 30px;
+                margin: 30px 0;
+              }
+            }
+          }
+        }
+        nav.min {
+          background-color: #f2f1f2;
+          button {
+            span {
+              background-color: black;
+            }
+          }
+
+
+
+
+
+        }
+        nav.active {
+          right: 0;
+        }
+      }
+    }
+    .block_home {
+      .block_home_inner {
+        .block_home_contact{
+          flex-direction: column;
+          & button:nth-child(2) {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
 }

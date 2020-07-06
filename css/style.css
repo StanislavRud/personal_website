@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -91,6 +94,8 @@ body .block_home {
         cursor: pointer;
         color: white;
         transition: all 0.2s linear; }
+        body .block_home .block_home_inner .block_home_contact button:focus {
+          outline: none; }
         body .block_home .block_home_inner .block_home_contact button:hover {
           background: #3bcdfc;
           color: black;
@@ -392,6 +397,62 @@ body .block_contact {
     body header .block_header_inner nav.min button span {
       background-color: black; }
   body header .block_header_inner nav.active {
-    right: 0; } }
+    right: 0; }
+  body .block_home .block_home_inner .block_home_contact {
+    width: 65%; }
+    body .block_home .block_home_inner .block_home_contact button {
+      font-size: 30px; }
+  body .block_about {
+    padding: 30px 0; }
+  body .block_education {
+    padding: 30px 0; }
+  body .block_works {
+    padding: 30px 0 0; }
+    body .block_works .block_works_inner .block_works_inner_slider {
+      height: 650px; }
+  body .block_contact {
+    padding: 30px 0; } }
+@media screen and (max-width: 760px) {
+  body header .block_header_inner nav {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #353b48;
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: .3s linear;
+    flex-direction: column;
+    align-items: flex-start; }
+    body header .block_header_inner nav .menu-toggler {
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 10px; }
+    body header .block_header_inner nav .active span:nth-child(1) {
+      transform: rotate(-45deg);
+      top: 4px; }
+    body header .block_header_inner nav .active span:nth-child(2) {
+      opacity: 0; }
+    body header .block_header_inner nav .active span:nth-child(3) {
+      transform: rotate(45deg);
+      top: -14px; }
+    body header .block_header_inner nav ul {
+      flex-direction: column; }
+      body header .block_header_inner nav ul li a.main_menu {
+        display: block;
+        font-size: 30px;
+        margin: 30px 0; }
+  body header .block_header_inner nav.min {
+    background-color: #f2f1f2; }
+    body header .block_header_inner nav.min button span {
+      background-color: black; }
+  body header .block_header_inner nav.active {
+    right: 0; }
+  body .block_home .block_home_inner .block_home_contact {
+    flex-direction: column; }
+    body .block_home .block_home_inner .block_home_contact button:nth-child(2) {
+      margin-top: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
