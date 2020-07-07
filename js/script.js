@@ -32,7 +32,19 @@ let addClassActive = () => {
 
 }
 
+
 activeToggleMenu.addEventListener("click", addClassActive);
+
+let closeMenu = ()=> {
+    activeToggleMenu.classList.remove('active');
+
+    document.querySelector('nav').classList.remove('active');
+
+
+}
+
+document.querySelectorAll('a.main_menu').forEach(n => n.addEventListener('click', closeMenu));
+
 
 let prevSlideButton = document.querySelector('.prevSlide');
 let nextSlideButton = document.querySelector('.nextSlide');

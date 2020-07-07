@@ -454,5 +454,48 @@ body .block_contact {
     flex-direction: column; }
     body .block_home .block_home_inner .block_home_contact button:nth-child(2) {
       margin-top: 40px; } }
+@media screen and (max-width: 690px) {
+  body .block_education .block_education_inner .block_education_inner_education_experience {
+    flex-direction: column; }
+    body .block_education .block_education_inner .block_education_inner_education_experience .block_education_inner_education_experience_work .block_work {
+      margin: 20px 0 0 0; }
+  body .block_contact .block_contact_inner .block_contact_inner_contact_me a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px; }
+    body .block_contact .block_contact_inner .block_contact_inner_contact_me a i {
+      margin-bottom: 10px; } }
+@media screen and (max-width: 580px) {
+  body .block_home .block_home_inner {
+    text-align: center; }
+  body .block_about .block_about_inner h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; }
+  body .block_about .block_about_inner .block_about_skills {
+    flex-direction: column; }
+    body .block_about .block_about_inner .block_about_skills .skill {
+      width: 100%; }
+      body .block_about .block_about_inner .block_about_skills .skill .skill_name {
+        margin: 5px 0; }
+  body .block_education .block_education_inner h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; } }
+@media screen and (max-width: 545px) {
+  body .block_about .block_about_inner .block_about_skills .skill {
+    padding: 10px 0; }
+  body .block_contact .block_contact_inner .block_contact_inner_contact_me {
+    flex-direction: column; }
+    body .block_contact .block_contact_inner .block_contact_inner_contact_me a {
+      width: 100%;
+      margin-top: 20px;
+      flex-direction: unset;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px; }
+      body .block_contact .block_contact_inner .block_contact_inner_contact_me a i {
+        margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */
