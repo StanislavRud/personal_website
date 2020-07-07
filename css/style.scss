@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +14,6 @@ $width: 1300px;
 
 body {
   header {
-    //background: black;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -24,19 +22,17 @@ body {
     .block_header_inner {
       max-width: $width;
       margin: 0 auto;
-      //height: 100px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
 
       .logo {
-        //height: 100%;
         width: 44px;
         height: 32px;
         border-radius: 50%;
         background: url("./../img/logo.png");
-        background-size: contain;
+        background-size: cover;
       }
 
       nav {
@@ -67,7 +63,6 @@ body {
 
           li {
             list-style: none;
-            //margin-right: 40px;
 
             a.main_menu {
               color: white;
@@ -133,6 +128,7 @@ body {
           cursor: pointer;
           color: white;
           transition: all 0.2s linear;
+          font-size: 20px;
           &:focus {
             outline: none;
           }
@@ -289,6 +285,11 @@ body {
 
             h3 {
               text-align: center;
+            }
+            p {
+              i {
+                margin-right: 10px;
+              }
             }
           }
         }
@@ -590,7 +591,7 @@ body {
     .block_home {
       .block_home_inner {
         .block_home_contact{
-          width: 65%;
+          width: 70%;
           button {
             font-size: 30px;
           }
@@ -616,7 +617,6 @@ body {
     }
   }
 }
-
 @media screen and (max-width: 760px){
   body {
     header {
@@ -788,6 +788,35 @@ body {
             padding: 5px 10px;
             i {
               margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 550px) {
+  body {
+    header {
+      .block_header_inner {
+        nav.active {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 460px) {
+  body {
+    header {
+      .block_header_inner {
+        nav.active {
+          padding: 0 50px;
+          ul {
+            li{
+              a {
+                margin: 20px 0;
+              }
             }
           }
         }

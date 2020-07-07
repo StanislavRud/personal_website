@@ -32,6 +32,19 @@ let addClassActive = () => {
 
 }
 
+let downloadCv = () => {
+    window.open('./CV_RudStanislav_Front_end.pdf');
+};
+
+document.querySelector('button.downloadCv').addEventListener('click', downloadCv);
+
+let contactMe = () => {
+    window.location.hash='#contact';
+}
+
+document.querySelector('button.contactMe').addEventListener('click', contactMe);
+
+
 
 activeToggleMenu.addEventListener("click", addClassActive);
 

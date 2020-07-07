@@ -24,7 +24,7 @@ body header {
       height: 32px;
       border-radius: 50%;
       background: url("./../img/logo.png");
-      background-size: contain; }
+      background-size: cover; }
     body header .block_header_inner nav {
       display: flex;
       align-items: center; }
@@ -93,7 +93,8 @@ body .block_home {
         background: transparent;
         cursor: pointer;
         color: white;
-        transition: all 0.2s linear; }
+        transition: all 0.2s linear;
+        font-size: 20px; }
         body .block_home .block_home_inner .block_home_contact button:focus {
           outline: none; }
         body .block_home .block_home_inner .block_home_contact button:hover {
@@ -205,6 +206,8 @@ body .block_education {
           border-radius: 10px; }
           body .block_education .block_education_inner .block_education_inner_education_experience .block_education_inner_education_experience_work .block_work h3 {
             text-align: center; }
+          body .block_education .block_education_inner .block_education_inner_education_experience .block_education_inner_education_experience_work .block_work p i {
+            margin-right: 10px; }
       body .block_education .block_education_inner .block_education_inner_education_experience .block_education_inner_education_experience_experience {
         display: flex;
         flex-direction: column;
@@ -399,7 +402,7 @@ body .block_contact {
   body header .block_header_inner nav.active {
     right: 0; }
   body .block_home .block_home_inner .block_home_contact {
-    width: 65%; }
+    width: 70%; }
     body .block_home .block_home_inner .block_home_contact button {
       font-size: 30px; }
   body .block_about {
@@ -497,5 +500,13 @@ body .block_contact {
       padding: 5px 10px; }
       body .block_contact .block_contact_inner .block_contact_inner_contact_me a i {
         margin: 0; } }
+@media screen and (max-height: 550px) {
+  body header .block_header_inner nav.active {
+    padding: 0 50px; } }
+@media screen and (max-height: 460px) {
+  body header .block_header_inner nav.active {
+    padding: 0 50px; }
+    body header .block_header_inner nav.active ul li a {
+      margin: 20px 0; } }
 
 /*# sourceMappingURL=style.css.map */
