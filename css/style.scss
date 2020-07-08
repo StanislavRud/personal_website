@@ -600,6 +600,14 @@ body {
     }
     .block_about {
       padding: 30px 0;
+      .block_about_inner {
+        .block_about_description {
+          flex-direction: column;
+          p {
+            margin-top: 20px;
+          }
+        }
+      }
     }
     .block_education {
       padding: 30px 0;
@@ -703,7 +711,12 @@ body {
           flex-direction: column;
           .block_education_inner_education_experience_work {
             .block_work {
-              margin: 20px 0 0 0;
+              margin: 10px 0 0 0;
+            }
+          }
+          .block_education_inner_education_experience_experience {
+            .block_edu {
+              margin-top: 10px;
             }
           }
         }
