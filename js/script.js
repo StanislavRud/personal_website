@@ -33,7 +33,7 @@ let addClassActive = () => {
 }
 
 let downloadCv = () => {
-    window.open('./CV_RudStanislav_Front_end.pdf');
+    window.open('./CV_RudStanislav_Front_end2.pdf');
 };
 
 document.querySelector('button.downloadCv').addEventListener('click', downloadCv);
